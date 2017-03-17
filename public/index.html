@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Lift</title>
+
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-messaging.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCudHs9kOvV04t0AR1WIHvlwISW9BBC-bw",
+            authDomain: "js-lift.firebaseapp.com",
+            databaseURL: "https://js-lift.firebaseio.com",
+            storageBucket: "js-lift.appspot.com",
+            messagingSenderId: "46433057648"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <link href="../styling/lift.css" rel="stylesheet">
+    <script src="../js/lift.js"></script>
+</head>
+<body>
+<h2>Lift Animation</h2>
+<div class="building">
+    <div id="lift">
+        <table class="floorNumbers">Lift
+            <tr>
+                <td><button class="number" onclick="setFloorNumber(5)">5</button></td>
+                <td><button class="number" onclick="setFloorNumber(4)">4</button></td>
+                <td><button class="number" onclick="setFloorNumber(3)">3</button></td>
+            </tr>
+            <tr>
+                <td><button class="number" onclick="setFloorNumber(2)">2</button></td>
+                <td><button class="number" onclick="setFloorNumber(1)">1</button></td>
+                <td><button class="number" onclick="setFloorNumber(-1)">G</button></td>
+            </tr>
+            <tr>
+                <td><button class="directionButtons" onclick="callLiftTo('upward')">/\</button></td>
+                <td></td>
+                <td><button class="directionButtons" onclick="callLiftTo('downward')" disabled>\/</button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="floor">Floor 5 <br><br> <button class="switches" onclick="liftCallFrom(5)">/\</button><br/><button class="switches" onclick="liftCallFrom(5)">\/</button></div>
+    <div class="floor">Floor 4 <br><br> <button class="switches" onclick="liftCallFrom(4)">/\</button><br/><button class="switches" onclick="liftCallFrom(4)">\/</button></div>
+    <div class="floor">Floor 3 <br><br> <button class="switches" onclick="liftCallFrom(3)">/\</button><br/><button class="switches" onclick="liftCallFrom(3)">\/</button></div>
+    <div class="floor">Floor 2 <br><br> <button class="switches" onclick="liftCallFrom(2)">/\</button><br/><button class="switches" onclick="liftCallFrom(2)">\/</button></div>
+    <div class="floor">Floor 1 <br><br> <button class="switches" onclick="liftCallFrom(1)">/\</button><br/><button class="switches" onclick="liftCallFrom(1)">\/</button></div>
+    <div class="floor">Ground  <br><br> <button class="switches" onclick="liftCallFrom(-1)">/\</button><br/><button class="switches" onclick="liftCallFrom(-1)">\/</button></div>
+</div>
+</body>
+</html>

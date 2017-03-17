@@ -1,0 +1,47 @@
+body {
+    font-size: larger;
+    margin-left: 30%;
+}
+
+.building {
+    background: gray;
+    width: 40%;
+    padding: 15px;
+}
+
+.floor {
+    height: 200px;
+    border: 6px solid white;
+    color: white;
+    text-align: right;
+    width: 60%;
+    margin-left: 38%;
+}
+
+#lift {
+    background: white;
+    float: left;
+    margin: 1110px 0 0 0;
+    height: 150px;
+    width: 9%;
+    position: absolute;
+    border: 6px solid silver;
+}
+
+.floorNumbers button {
+    background: lightpink;
+    color: gray;
+    cursor: pointer;
+}
+
+.floorNumbers {
+    margin-left: 3%;
+    border-collapse: collapse;
+}
+
+.switches {
+    color: gray;
+    background: white;
+    margin-right: 6px;
+    cursor: pointer;
+}
